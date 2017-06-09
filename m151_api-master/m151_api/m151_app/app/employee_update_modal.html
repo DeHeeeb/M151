@@ -1,0 +1,28 @@
+<form id="edit-employee-form">
+    <div class="form-group">
+        <label for="prename">Prename</label>
+        <input name="prename" type="text" class="form-control" id="prename">
+    </div>
+    <div class="form-group">
+        <label for="surname">Surname</label>
+        <input name="surname" type="text" class="form-control" id="surname">
+    </div>
+    <div class="form-group">
+        <label for="organisation">Select organisation:</label>
+        <select name="organisation" class="form-control" id="organisation">
+        </select>
+    </div>
+</form>
+<script>
+    $.get(BASEURL + "/organisations", function (organisations) {
+        organisations.forEach(function (organisation) {
+            var option = $('<option />');
+            option.attr('value', organisation.id).text(organisation.name);
+            $('#organisation').append(option);
+        });
+        $("#organisation").val(employeeToEdit.organisation.id);
+    });
+    $("#prename").val(employeeToEdit.prename);
+    $("#surname").val(employeeToEdit.surname);
+
+</script>

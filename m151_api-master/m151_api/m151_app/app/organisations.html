@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Ammonix">
+    <link rel="icon" href="img/favicon.ico">
+
+    <title>Organisation - Ludotheken</title>
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/organisation.css" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Ludotheken</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="lend.html">Lend</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">Administration <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="employees.html">Employees</a></li>
+                            <li><a href="organisations.html">Organisations</a></li>
+                            <li><a href="games.html">Games</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a id="logout" href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="organisations-loader" class="loader"></div>
+            <table id="organisations-table" hidden class="dataTable display table" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Zip</th>
+                    <th>Street</th>
+                    <th>Streetnumber</th>
+                    <th>Edit</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <button id="open-add-organisation" class="btn btn-primary"><span class="glyphicon glyphicon-plus
+" aria-hidden="true"></span> Add organisation
+            </button>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="container text-muted">
+        <p>
+            © 2017 Joan Künzler, all rights reserved
+            <a class="pull-right" href="https://opensource.org/licenses/MIT" target="_blank">
+                MIT License
+            </a>
+        </p>
+    </div>
+</footer>
+<!-- Modal -->
+<div id="organisations-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.15/kt-2.2.1/r-2.1.1/datatables.min.js"></script>
+<script src="js/js.cookie.js"></script>
+<script src="js/bootstrap-notify.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/authorisationHandler.js"></script>
+<script src="js/organisation.js"></script>
+</body>
+</html>
+

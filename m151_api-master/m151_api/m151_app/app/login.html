@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Ammonix">
+    <link rel="icon" href="img/favicon.ico">
+
+    <title>Login - Ludotheken</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Ludotheken</a>
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="container-fluid">
+        <div class="row">
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input name="email" type="email" class="form-control" id="email" placeholder="example@gmail.com">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input name="password" type="password" class="form-control" id="password" placeholder="*************">
+                </div>
+                <p><a href="resetPassword.html">Help! I forgot my password.</a></p>
+                <button id="login" type="button" class="btn btn-default">Login</button>
+                <a type="button" class="btn btn-default" href="register.html">Register</a>
+            </form>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="container text-muted">
+        <p>
+            © 2017 Joan Künzler, all rights reserved
+            <a class="pull-right" href="https://opensource.org/licenses/MIT" target="_blank">
+                MIT License
+            </a>
+        </p>
+    </div>
+</footer>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/js.cookie.js"></script>
+<script src="js/bootstrap-notify.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

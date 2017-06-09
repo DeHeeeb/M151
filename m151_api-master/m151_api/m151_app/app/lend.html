@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Ammonix">
+    <link rel="icon" href="img/favicon.ico">
+
+    <title>Lend - Ludotheken</title>
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/lend.css" rel="stylesheet">
+</head>
+
+<body>
+<header>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Ludotheken</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Lend</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">Administration <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="employees.html">Employees</a></li>
+                            <li><a href="organisations.html">Organisations</a></li>
+                            <li><a href="games.html">Games</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a id="logout" href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="container-fluid">
+        <div class="row">
+            <div>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a id="gamesNavigator" href="#games" aria-controls="games" role="tab"
+                           data-toggle="tab">
+                            Games
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a id="cartNavigator" href="#cart" aria-controls="cart" role="tab"
+                           data-toggle="tab">
+                            <span class='glyphicon glyphicon-shopping-cart' aria-hidden='true'></span> Cart
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="games">
+                        <div class="loader"></div>
+                        <table hidden class="dataTable display table" cellspacing="0" width="100%">
+                            <thead>
+                            <tr>
+                                <th>Number</th>
+                                <th>Name</th>
+                                <th>Tariff CHF</th>
+                                <th>Age</th>
+                                <th>Organisation</th>
+                                <th>Publisher</th>
+                                <th>Add to cart</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="cart">
+                        <div class="loader"></div>
+                        <table hidden class="dataTable display table" cellspacing="0" width="100%">
+                            <thead>
+                            <tr>
+                                <th>Number</th>
+                                <th>Name</th>
+                                <th>Tariff CHF</th>
+                                <th>Age</th>
+                                <th>Organisation</th>
+                                <th>Publisher</th>
+                                <th>Remove from cart</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                        <button id="rent" class="hide btn btn-primary">Rent</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="container text-muted">
+        <p>
+            © 2017 Joan Künzler, all rights reserved
+            <a class="pull-right" href="https://opensource.org/licenses/MIT" target="_blank">
+                MIT License
+            </a>
+        </p>
+    </div>
+</footer>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.15/kt-2.2.1/r-2.1.1/datatables.min.js"></script>
+<script src="js/js.cookie.js"></script>
+<script src="js/main.js"></script>
+<script src="js/authorisationHandler.js"></script>
+<script src="js/lend.js"></script>
+</body>
+</html>
